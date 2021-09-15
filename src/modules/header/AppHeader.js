@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Link } from "react-router-dom";
+
 const AppHeader = () => {
     return (
         <nav className="navbar navbar-expand-sm bg-light">        
@@ -8,7 +9,10 @@ const AppHeader = () => {
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/About">About</Link>
-                </li>                
+                </li>   
+                <li className="nav-item">
+                    <Link className="nav-link" to="/Pets">Inventory</Link>
+                </li>              
             </ul>
             <ul className="navbar-nav navbar-right-nav">
                 <li className="nav-item">

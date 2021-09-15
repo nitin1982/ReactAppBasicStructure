@@ -2,6 +2,7 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import SafeThunk from './middleware/SafeThunk';
 import User from '../redux/reducers/User';
+import Cart from '../redux/reducers/Cart';
 
 const enhancers = [];
 if (
@@ -15,7 +16,7 @@ if (
     }
   }
 
-const reducers = { User };
+const reducers = { User, Cart };
 const rootReducer = combineReducers(reducers);
 
 export const configureStore = () => createStore(rootReducer, applyMiddleware(thunk, SafeThunk), ...enhancers);
